@@ -61,19 +61,19 @@ while True:
     vendor = input('Drink choice: ')
     try:
         userChoice = str(vendor.lower())
-        if (userChoice == itemOne):
+        if (userChoice == itemOne or userChoice == 'a'):
             userDrink = itemOne
             userTotal = aPrice
             break
-        elif (userChoice == itemTwo):
+        elif (userChoice == itemTwo or userChoice == 'b'):
             userDrink = itemTwo
             userTotal = bPrice
             break
-        elif (userChoice == itemThree):
+        elif (userChoice == itemThree or userChoice == 'c'):
             userDrink = itemThree
             userTotal = cPrice
             break
-        elif (userChoice == itemFour):
+        elif (userChoice == itemFour or userChoice == 'd'):
             userDrink = itemFour
             userTotal = dPrice
             break
@@ -88,7 +88,7 @@ print(f'You choose {userDrink}, A small cost {userTotal}. Lets get your drink si
 #Getting User Drink Size
 while True:
     print("Choose your drink size: Small, Medium, or Large.")
-    size = input("Enter your drink size: ")
+    size = input("Enter your drink size (S, M, L): ")
     try:
         userChoice = str(size.lower())
         if (userChoice == 's' or userChoice == smSize):
